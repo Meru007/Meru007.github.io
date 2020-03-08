@@ -1,35 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Color game</title>
-	<link rel="stylesheet" type="text/css" href="colorGame.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.svg">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Muhammad Mugni Hadi's Resume</title>
 </head>
 <body>
-	<h1>
-		The Great <br>
-		<span id="colorDisplay">RGB</span> <br>
-		Color Game
-	</h1>
-	<div id="stripe">
-		<button id="reset">New Colors</button>
-		<span id="message"></span>
-		<button class="mode">Easy</button>
-		<button class="mode" >Hard</button>
-		<button class="mode selected">Extreme</button>
-	</div>
-
-	<div id="container">
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-	</div>
-
-<script type="text/javascript" src="colorGame.js"></script>
+  <div class="container">
+    <div class="side-wrapper">
+      <div class="display-name">
+        <img class="avatar" src="avatar.jpg" alt="avatar" width="128px" >
+        <div class="header-wrapper-mobile">
+          <h1>Muhammad Mugni Hadi</h1>
+          <h3>Frontend Developer</h3>
+        </div>
+      </div>
+      <div class="contacts">
+        <h2>Contacts</h2>
+        <p><b>Email</b></p>
+        <p>mugnimaestra2@gmail.com</p>
+        <p><b>Phone</b></p>
+        <p>0823-1523-3396</p>
+        <p><b>GitHub</b></p>
+        <p><a href="https://github.com/mugnimaestra" target="_blank" title="mugnimaestra's Github">mugnimaestra</a></p>
+        <p><b>LinkedIn</b></p>
+        <p><a href="https://linkedin.com/in/mugnimaestra" target="_blank" title="mugnimaestra's LinkedIn">mugnimaestra</a></p>
+      </div>
+      <div class="skills">
+        <h2>Skills</h2>
+        <p>HTML5</p>
+        <p>CSS3</p>
+        <p>JavaScript/ES6</p>
+        <p>REST</p>
+        <p>GraphQL</p>
+        <p>ReactJS</p>
+        <p>NodeJS</p>
+        <p>NextJS</p>
+        <p>VueJS</p>
+        <p>NuxtJS</p>
+        <p>Redux</p>
+        <p>SCSS</p>
+        <p>CSS-in-JS</p>
+        <p></p>
+      </div>
+      <div class="skills">
+        <h2>Languages</h2>
+        <p>Indonesia (native)</p>
+        <p>English (fluent)</p>
+      </div>
+    </div>
+    <div class="main-wrapper">
+      <div class="header-wrapper">
+        <h1>Muhammad Mugni Hadi</h1>
+        <h3>Frontend Developer</h3>
+      </div>
+      <div class="profile">
+        <h2>Profile</h2>
+        <p>Gunadarma University Bachelor Graduate in 2018 with Computer Science degree. I'm interested with web technologies & being problem solver. Experienced as Frontend Developer with JavaScript framework such as React or Vue. Currently developing website mainly with NextJS, an SSR framework for React. Sometimes taking side projects for increasing experience and chance for learn various technologies.</p>
+      </div>
+      <div class="profile">
+        <h2>Employment History</h2>
+        <div class="wrapper-item">
+          <h3><a href="https://ciayo.com" target="_blank" title="CIAYO Comics">Frontend Developer, CIAYO</a></h3>
+          <p>Nov 2018 - Present, Jakarta</p>
+        </div>
+      </div>
+      <div class="profile">
+        <h2>Education</h2>
+        <div class="wrapper-item">
+          <h3><a href="https://www.gunadarma.ac.id/" target="_blank" title="Gunadarma University">Gunadarma University, Computer Science</a></h3>
+          <p>Oct 2014 - Oct 2018, Depok</p>
+        </div>
+      </div>
+      <div class="profile">
+        <h2>Projects</h2>
+        <div class="wrapper-item">
+          <h3><a href="https://www.wibuverse.com" target="_blank" tite="Wibuverse Website">Wibuverse</a></h3>
+          <p>Jan 2020 - Present</p>
+          <p>Develop in-progress wibuverse.com with NextJS</p>
+        </div>
+        <div class="wrapper-item">
+          <h3><a href="https://lifelearnplatform.com/" target="_blank" title="LL App Social">LifeLearn Platform Social</a></h3>
+          <p>Nov 2019 - Present</p>
+          <p>Currently part-time frontend for LifeLearn Social Portal with ReactJS, GraphQL, SCSS</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

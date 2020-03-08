@@ -1,0 +1,153 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #545E6C;
+  background: #f5f5f5;
+  font-size: 16px;
+  padding: 30px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  background: #fff;
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0, 0.5);
+  border-width: 1px;
+  border-color: rgba(0,0,0, 0.5);
+}
+
+.side-wrapper {
+  width: 300px;
+  background: #f4eeff;
+}
+
+.contacts {
+  margin: 0 0 4rem 2rem;
+}
+
+.contacts a, .wrapper-item a {
+  text-decoration: none;
+  color: #545E6C;
+}
+
+.contacts a:hover, .wrapper-item a:hover {
+  text-decoration: underline;
+}
+
+.skills {
+  margin: 0 0 4rem 2rem;
+}
+
+.skills p {
+  font-weight: 500;
+}
+
+.main-wrapper {
+  width: 600px;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h2 {
+  color: #20639b;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin: 2rem 0 2rem 2rem;
+}
+
+.header-wrapper {
+  margin-top: 3rem;
+  margin-bottom: 6.25rem;
+}
+
+.header-wrapper h1 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.header-wrapper h3 {
+  margin-top: 0;
+}
+
+.profile {
+  margin-bottom: 4rem;
+}
+
+.wrapper-item h3 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.wrapper-item p {
+  margin-top: 0;
+}
+
+.header-wrapper-mobile {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .side-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .skills, .contacts,  {
+    margin-left: 2rem;
+  }
+
+  .contacts, .skills {
+    margin-bottom: 2rem;
+  }
+
+  .avatar {
+    margin-left: 0;
+  }
+
+  .profile {
+    margin: 0 2rem 4rem;
+  }
+
+  .header-wrapper-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .header-wrapper {
+    display: none;
+  }
+
+  .display-name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

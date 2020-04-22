@@ -115,12 +115,12 @@
   </div>
   <script type="text/javascript">
     function genPDF() {
-      var el = document.getElementById('container'));
+      var el = document.getElementById('container');
       var widthPdf = el.offsetWidth;
       var heightPdf = el.offsetHeight;
       html2canvas(el).then(canvas => {
         const img = canvas.toDataURL('image/png');
-        const doc = new jsPDF('p', 'px', [1000, 2095]);
+        const doc = new jsPDF('p', 'px', [widthPdf, heightPdf]);
         const width = doc.internal.pageSize.getWidth();
         const height = doc.internal.pageSize.getHeight();
         doc.addImage(img, 'JPEG', 0, 0, width, height);

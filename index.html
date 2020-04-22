@@ -117,7 +117,7 @@
     function genPDF() {
       html2canvas(document.getElementById('container')).then(canvas => {
         const img = canvas.toDataURL('image/png');
-        const doc = new jsPDF('p', 'mm', 'a4');
+        const doc = new jsPDF('p', 'mm', [1000, 2096]);
         const width = doc.internal.pageSize.getWidth();
         const height = doc.internal.pageSize.getHeight();
         doc.addImage(img, 'JPEG', 0, 0, width, height);

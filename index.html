@@ -6,8 +6,8 @@
   <link rel="shortcut icon" href="favicon.svg">
   <link rel="stylesheet" type="text/css" href="index.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- <script src="js/html2canvas.min.js" type="text/javascript"></script>
-  <script src="js/jspdf.min.js" type="text/javascript"></script> -->
+  <script src="js/html2canvas.min.js" type="text/javascript"></script>
+  <script src="js/jspdf.min.js" type="text/javascript"></script>
   <title>Muhammad Mugni Hadi's Resume</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
       <div class="display-name">
         <img class="avatar" src="avatar.jpg" alt="avatar" width="128px" crossorigin="anonymous">
         <div class="header-wrapper-mobile">
-          <h1>Muhammad Mugni Hadiasd</h1>
+          <h1>Muhammad Mugni Hadi</h1>
           <h3>Frontend Developer</h3>
         </div>
       </div>
@@ -32,10 +32,10 @@
         <p><a href="https://linkedin.com/in/mugnimaestra" target="_blank" title="mugnimaestra's LinkedIn">mugnimaestra</a></p>
       </div>
       <div class="skills">
-        <h2>Skills</h2>
+        <h2>Playground:</h2>
         <p>HTML5</p>
         <p>CSS3</p>
-        <p>JavaScript/ES6</p>
+        <p>JavaScript, ES6</p>
         <p>REST</p>
         <p>GraphQL</p>
         <p>ReactJS</p>
@@ -67,13 +67,22 @@
         <h2>Employment History</h2>
         <div class="wrapper-item">
           <h3><a href="https://ciayo.com" target="_blank" title="CIAYO Comics">Frontend Developer, CIAYO</a></h3>
-          <p>Nov 2018 - Present, Jakarta</p>
+          <p>Nov 2018 - April 2020, Jakarta</p>
           <ul>
-            <li>Contributing at CIAYO Comics website using React and Next.JS as the framework for the server-side rendering stuff
+            <li>Assigned as someone who develop features and maintaining CIAYO Comics website. It use React library for the UI, and use Next.js for the framework.
             (https://www.ciayo.com, https://rewards.ciayo.com)</li>
-            <li>Manage user state with React Context, Redux</li>
-            <li>Implement web storage with immutability to keep consistency, to store statistic data.</li>
-            <li>CSS-in-JS with Styled Component</li>
+            <li>Implements state management on the web app using React Context & Redux, such as storing user state authentication, user 'money' balance for purchasing comics or handling user interface conditional rendering (different UI for different state)</li>
+            <li>Create a feature where I need to store information where the last position user read comic in certain chapters, and need to be consistent for every dimension for every device. It's possible using Web API Local Storage </li>
+            <li>Create a logger feature when user read comic, the progress, what chapters and gives different styles to let the user know which chapter they already read, locally.</li>
+            <li>Create ads implementation manually (Google Publisher Tags & MFun) since it needs some adjustment with React lifecycle and how their documentation works. </li>
+            <li>Many more feature such applying logic flow when user purchase comics and updating the value, make it always sync with the backend, creating "Tokopedia Egg" like on homepage to engage user to click it and claim prizes. Bug fixing bugs on production based on task on JIRA, refactor old code when have time.</li>
+            <li>Good CSS understanding, implements 'tricky' css to follow design from UI Team such as using pseudo-class :before or :after to add or put non-standard design.</li>
+            <li>It use CSS Framework such as Foundation to help create the responsive design, and use CSS-in-JS Library like Styled Components, because it have nice styling scope & better developer experience.</li>
+            <li>Project management is using JIRA, it use agile software development when we do planning sprint, design, develop,
+              test & evaluate. Usually 1 sprint duration is around 2 weeks and a week for testing.</li>
+            <li>All code are self-hosted on GitLab, I do understand how to use Git in general and I use SourceTree to help me manage
+              branch easier especially when merging branch and have lot of conflicts. It also helps to implement Git Flow faster
+              where we developing software on develop branch and when the development is done, I push it to staging server to let QA test it.</li>
           </ul>
         </div>
       </div>
@@ -94,28 +103,28 @@
         <div class="wrapper-item">
           <h3><a href="https://www.wibuverse.com" target="_blank" tite="Wibuverse Website">Wibuverse</a></h3>
           <p>Jan 2020 - Present</p>
-          <p>Develop in-progress wibuverse.com with NextJS</p>
+          <p>An e-commerce platform for segmented indie market. This project is developed from scratch, the engineers only 2, 1 frontend (me) using React & 1 backend using Go. We handle all of the necessary things needed to setup a web app such as domain, VPS, webserver (nginx). all of the instance are wrapped with Docker container to manage things easier. The frontend also use Next.js on this one, I often experience new stuff here as well such as maximizing usage of Functional component instead of Class component, create script for automation when deploying or discussing features based on the mockup design. We use Trello for project management on this one & Zeplin for for hosting the design. </p>
         </div>
         <div class="wrapper-item">
           <h3><a href="https://lifelearnplatform.com/" target="_blank" title="LL App Social">LifeLearn Platform Social</a></h3>
           <p>Nov 2019 - Present</p>
-          <p>Currently part-time frontend for LifeLearn Social Portal with ReactJS, GraphQL, SCSS</p>
+          <p>Currently part-time frontend for LifeLearn Social Portal with ReactJS, GraphQL, SCSS. It's not always available every month but so far I already implement few feature like payment integration with backend, optimizing user state management with React Context & bug fixing some issue when needed.</p>
         </div>
       </div>
     </div>
   </div>
   <script type="text/javascript">
-    // function genPDF() {
-    //   html2canvas(document.getElementById('container')).then(canvas => {
-    //     const img = canvas.toDataURL('image/png');
-    //     const doc = new jsPDF('p', 'mm', 'a4');
-    //     const width = doc.internal.pageSize.getWidth();
-    //     const height = doc.internal.pageSize.getHeight();
-    //     doc.addImage(img, 'JPEG', 0, 0, width, height);
-    //     doc.save('testFixed.pdf');
-    //   });
-    // }
-    // genPDF();
+    function genPDF() {
+      html2canvas(document.getElementById('container')).then(canvas => {
+        const img = canvas.toDataURL('image/png');
+        const doc = new jsPDF('p', 'mm', 'a4');
+        const width = doc.internal.pageSize.getWidth();
+        const height = doc.internal.pageSize.getHeight();
+        doc.addImage(img, 'JPEG', 0, 0, width, height);
+        doc.save('CV Mugni 2020 v3.pdf');
+      });
+    }
+    genPDF();
   </script>
 </body>
 </html>

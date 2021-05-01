@@ -6,8 +6,8 @@
   <link rel="shortcut icon" href="favicon.svg">
   <link rel="stylesheet" type="text/css" href="index.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- <script src="js/html2canvas.min.js" type="text/javascript"></script>
-  <script src="js/jspdf.min.js" type="text/javascript"></script> -->
+  <script src="js/html2canvas.min.js" type="text/javascript"></script>
+  <script src="js/jspdf.min.js" type="text/javascript"></script>
   <title>Muhammad Mugni Hadi's Resume</title>
 </head>
 <body>
@@ -133,21 +133,27 @@
       </div>
     </div>
   </div>
+  <button onclick="genPDF()">Download as PDF</button>
   <script type="text/javascript">
-    // function genPDF() {
-    //   var el = document.getElementById('container');
-    //   var widthPdf = el.offsetWidth;
-    //   var heightPdf = el.offsetHeight;
-    //   html2canvas(el).then(canvas => {
-    //     const img = canvas.toDataURL('image/png');
-    //     const doc = new jsPDF('p', 'px', [widthPdf, heightPdf]);
-    //     const width = doc.internal.pageSize.getWidth();
-    //     const height = doc.internal.pageSize.getHeight();
-    //     doc.addImage(img, 'JPEG', 0, 0, width, height);
-    //     doc.save('CV Mugni 2020 v3.pdf');
-    //   });
-    // }
-    // genPDF();
+    function genPDF() {
+      var el = document.getElementById('container');
+      var elRect = el.getBoundingClientRect();
+      var widthPdf2 = elRect.width;
+      var heightPdf2 = elRect.height;
+      var widthPdf = el.offsetWidth;
+      var heightPdf = el.offsetHeight;
+      html2canvas(el).then(canvas => {
+        const img = canvas.toDataURL('image/png');
+        const doc = new jsPDF('p', 'px', [widthPdf2, heightPdf2]);
+        const width = doc.internal.pageSize.getWidth();
+        const height = doc.internal.pageSize.getHeight();
+        console.log('old img', widthPdf, heightPdf);
+        console.log('img', widthPdf2, heightPdf2);
+        console.log('pdf', width, height);
+        doc.addImage(img, 'JPEG', 0, 0, width, height);
+        doc.save('CV Mugni 2020 v4.pdf');
+      });
+    }
   </script>
 </body>
 </html>

@@ -133,27 +133,47 @@
       </div>
     </div>
   </div>
-  <button onclick="genPDF()">Download as PDF</button>
+  <!-- <button onclick="genPDF()">Download as PDF</button> -->
   <script type="text/javascript">
+    function saveAs(uri, filename) {
+
+        var link = document.createElement('a');
+
+        if (typeof link.download === 'string') {
+
+          link.href = uri;
+          link.download = filename;
+
+          //Firefox requires the link to be in the body
+          document.body.appendChild(link);
+
+          //simulate click
+          link.click();
+
+          //remove the link when done
+          document.body.removeChild(link);
+
+        } else {
+
+          window.open(uri);
+
+        }
+      }
     function genPDF() {
       var el = document.getElementById('container');
-      var elRect = el.getBoundingClientRect();
-      var widthPdf2 = elRect.width;
-      var heightPdf2 = elRect.height;
       var widthPdf = el.offsetWidth;
       var heightPdf = el.offsetHeight;
       html2canvas(el).then(canvas => {
-        const img = canvas.toDataURL('image/png');
-        const doc = new jsPDF('p', 'px', [widthPdf2, heightPdf2]);
-        const width = doc.internal.pageSize.getWidth();
-        const height = doc.internal.pageSize.getHeight();
-        console.log('old img', widthPdf, heightPdf);
-        console.log('img', widthPdf2, heightPdf2);
-        console.log('pdf', width, height);
-        doc.addImage(img, 'JPEG', 0, 0, width, height);
-        doc.save('CV Mugni 2020 v4.pdf');
+        const img = canvas.toDataURL('image/jpeg', 1.0);
+        saveAs(img, 'file-name2.jpg');
+        // const doc = new jsPDF('p', 'px', [widthPdf, heightPdf]);
+        // const width = doc.internal.pageSize.getWidth();
+        // const height = doc.internal.pageSize.getHeight();
+        // doc.addImage(img, 'JPEG', 0, 0, width, height);
+        // doc.save('CV Mugni 2020 v4.pdf');
       });
     }
+    // genPDF();
   </script>
 </body>
 </html>
